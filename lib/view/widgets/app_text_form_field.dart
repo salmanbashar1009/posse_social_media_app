@@ -33,7 +33,7 @@ final  String? Function(String?)? validator;
         hintText: hintText,
         prefixIconColor: Color(0xFF777980),
         prefixIcon: prefixIcon,
-        prefixIconConstraints: BoxConstraints(maxHeight: 40.h, maxWidth: 40.w),),
+        prefixIconConstraints: BoxConstraints(maxHeight: 36.h, maxWidth: 36.w),),
     );
   }
 }

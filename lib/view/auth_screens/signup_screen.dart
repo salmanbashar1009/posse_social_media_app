@@ -8,13 +8,13 @@ import 'package:gellirbabe_posse_app/view/widgets/app_text_form_field.dart';
 
 import '../../theme/theme_extentions/color_palette.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Utils.appBarBackButton(context),
+      // appBar: Utils.appBarBackButton(context),
       body: SafeArea(
         child: Padding(
           padding: AppPadding.screenPadding,
@@ -23,18 +23,26 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Hi! Welcome Back',
+                  'Create Your Account',
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Text(
-                  "Log in to your account",
+                  "Sign up and enjoy your experience",
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                     color: AppColors.bodyTextColorGreyScale,
                   ),
                 ),
-                SizedBox(height: 40.h),
+                SizedBox(height: 32.h),
                 AppTextFormField(
-                  hintText: "Your Email",
+                  hintText: "Your name",
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 4.w),
+                    child: ImageIcon(AssetImage("assets/icons/person.png"),size: 18.r,),
+                  ),
+                ),
+                SizedBox(height: 16.h),
+                AppTextFormField(
+                  hintText: "Your email",
                   prefixIcon: Padding(
                     padding: EdgeInsets.only(left: 16.w, right: 4.w),
                     child: ImageIcon(AssetImage("assets/icons/email.png"),size: 18.r,),
@@ -42,7 +50,28 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 16.h),
                 AppTextFormField(
-                  hintText: "Enter your password",
+                  hintText: "Date of birth",
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 4.w),
+                    child: ImageIcon(AssetImage("assets/icons/calendar.png"),size: 18.r,),
+                  ),
+                ),
+                SizedBox(height: 16.h),
+                AppTextFormField(
+                  hintText: "Create your password",
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 16.w, right: 4.w),
+                    child: ImageIcon(AssetImage("assets/icons/lock.png",),size: 18.r,),
+                  ),
+                  suffixIcon: Icon(
+                    Icons.visibility_off_outlined,
+                    size: 20.r,
+                    color: Color(0xFF777980),
+                  ),
+                ),
+                SizedBox(height: 16.h),
+                AppTextFormField(
+                  hintText: "Confirm your password",
                   prefixIcon: Padding(
                     padding: EdgeInsets.only(left: 16.w, right: 4.w),
                     child: ImageIcon(AssetImage("assets/icons/lock.png"),size: 18.r,),
@@ -53,33 +82,7 @@ class LoginScreen extends StatelessWidget {
                     color: Color(0xFF777980),
                   ),
                 ),
-                SizedBox(height: 16.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(
-                          Icons.check_circle_rounded,
-                          color: Color(0xFF2764B5),
-                        ),
-                        SizedBox(width: 4.w),
-                        Text(
-                          "Remember me",
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ],
-                    ),
-                    Text(
-                      "Forgot Password?",
-                      style: Theme.of(
-                        context,
-                      ).textTheme.bodyMedium?.copyWith(color: Color(0xFF2764B5)),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 44.h),
+                SizedBox(height: 32.h),
                 SizedBox(
                   height: 56.h,
                   width: double.infinity,
@@ -98,7 +101,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 44.h),
+                SizedBox(height: 32.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -110,26 +113,26 @@ class LoginScreen extends StatelessWidget {
                     Expanded(child: Divider(color: Color(0xFFE2E8F0),height: 1,)),
                   ],
                 ),
-                SizedBox(height: 44.h,),
+                SizedBox(height: 24.h,),
                 buildLoginButton(context: context,imagePath: "assets/icons/google.png",title: "Continue with Google"),
                 SizedBox(height: 16.h,),
                 buildLoginButton(context: context,imagePath: "assets/icons/apple.png",title: "Continue with Apple"),
-                SizedBox(height: 32.h,),
+                SizedBox(height: 24.h,),
                 Align(
                   alignment: Alignment.center,
                   child: RichText(
                     text: TextSpan(
-                      text: "Don't have an account? ",
+                      text: "Already have an account? ",
                       style:Theme.of(context).textTheme.bodyMedium,
                       children: [
                         TextSpan(
-                          text: 'Sign Up',
+                          text: 'Log in',
                           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             color: Color(0xFF2764B5)
                           ),
                           recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                            Navigator.pushNamedAndRemoveUntil(context, RouteName.signUpScreen, (_)=>false);
+                            ..onTap = (){
+                            Navigator.pushNamedAndRemoveUntil(context, RouteName.loginScreen, (route) => false, );
                             },
                         ),
                       ],

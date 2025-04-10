@@ -137,7 +137,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     imagePath: "assets/icons/user.png",
                     title: "New User? Sign Up",
                     color: AppColors.primary,
-                    onTap: (){}
+                    onTap: (){
+                      Navigator.pushNamedAndRemoveUntil(context, RouteName.signUpScreen, (_) => false);
+                    }
                   ),
                 ],
               ),

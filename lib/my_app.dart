@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           title: 'Posse',
           theme: AppTheme.lightTheme,
 
-          initialRoute: RouteName.splashScreen,
+          initialRoute: RouteName.onboardingScreen,
           routes: AppRoutes.getRoutes(),
 
         );
