@@ -1,12 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gellirbabe_posse_app/constant/app_padding.dart';
-import 'package:gellirbabe_posse_app/routing/route_name.dart';
-import 'package:gellirbabe_posse_app/utility/utils.dart';
-import 'package:gellirbabe_posse_app/view/widgets/app_text_form_field.dart';
+import 'package:gellirbabe_posse_app/core/constant/app_padding.dart';
+import 'package:gellirbabe_posse_app/core/routing/route_name.dart';
+import 'package:gellirbabe_posse_app/core/theme/theme_extentions/color_palette.dart';
+import 'package:gellirbabe_posse_app/core/utils/utils.dart';
+import 'package:gellirbabe_posse_app/presentation/features/widgets/app_text_form_field.dart' show AppTextFormField;
 
-import '../../theme/theme_extentions/color_palette.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

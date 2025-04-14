@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gellirbabe_posse_app/core/theme/theme_extentions/color_palette.dart';
 
-import '../../theme/theme_extentions/color_palette.dart';
 
 class AppTextFormField extends StatelessWidget {
   const AppTextFormField({

@@ -2,11 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gellirbabe_posse_app/constant/app_padding.dart';
-import 'package:gellirbabe_posse_app/routing/route_name.dart';
+import 'package:gellirbabe_posse_app/core/constant/app_padding.dart';
+import 'package:gellirbabe_posse_app/core/routing/route_name.dart';
+import 'package:gellirbabe_posse_app/core/theme/theme_extentions/color_palette.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../theme/theme_extentions/color_palette.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

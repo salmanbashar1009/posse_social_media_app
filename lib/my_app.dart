@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gellirbabe_posse_app/routing/app_routes.dart';
-import 'package:gellirbabe_posse_app/routing/route_name.dart';
-import 'package:gellirbabe_posse_app/theme/app_theme.dart';
+import 'package:gellirbabe_posse_app/core/routing/app_routes.dart';
+import 'package:gellirbabe_posse_app/core/routing/route_name.dart';
+import 'package:gellirbabe_posse_app/core/theme/app_theme.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
