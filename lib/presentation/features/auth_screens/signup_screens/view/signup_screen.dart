@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gellirbabe_posse_app/core/constant/app_padding.dart';
 import 'package:gellirbabe_posse_app/core/routing/route_name.dart';
 import 'package:gellirbabe_posse_app/core/theme/theme_extentions/color_palette.dart';
-import 'package:gellirbabe_posse_app/presentation/features/widgets/app_text_form_field.dart';
+import 'package:gellirbabe_posse_app/presentation/common/widgets/app_text_form_field.dart';
 
 
 class SignUpScreen extends StatelessWidget {
